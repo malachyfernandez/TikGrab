@@ -1,5 +1,5 @@
 /**
- * TikTok Video Downloader - Background Script
+ * TikGrab - Background Script
  * Handles download coordination and storage
  */
 
@@ -7,7 +7,7 @@
 class Logger {
   constructor() {
     this.enabled = true;
-    this.prefix = '[TT-Downloader-BG]';
+    this.prefix = '[TG-BG]';
     this.maxLogs = 500; // Keep only last 500 logs
   }
   
@@ -81,7 +81,7 @@ const logger = new Logger();
 
 // Initialize extension on install
 chrome.runtime.onInstalled.addListener((details) => {
-  logger.log('Extension installed/updated');
+  logger.log('TikGrab extension installed/updated');
   logger.debug('Install details:', details);
   
   try {
@@ -262,7 +262,7 @@ chrome.action.onClicked.addListener((tab) => {
 });
 
 // Log extension startup
-logger.log('Background script loaded');
+logger.log('TikGrab background script loaded');
 logger.debug('Chrome runtime available:', typeof chrome.runtime !== 'undefined');
 logger.debug('Chrome downloads API available:', typeof chrome.downloads !== 'undefined');
 logger.debug('Chrome storage API available:', typeof chrome.storage !== 'undefined');

@@ -1,11 +1,11 @@
-# TikTok Video Downloader
+# TikGrab
 
-A powerful Chrome extension that lets you download TikTok videos directly from your browser with multiple intelligent fallback methods.
+A powerful Chrome extension that lets you download TikTok videos instantly with one click.
 
 ## ✨ Features
 
 - **Smart Video Detection** - Automatically finds TikTok videos on any page
-- **Multiple Download Methods** - Blob URL, MediaRecorder, and fetch proxy fallbacks
+- **Instant Downloads** - One-click video downloading
 - **Format Selection** - Choose between MP4 and WebM formats in settings
 - **Adaptive Technology** - Handles TikTok's changing website structure
 - **One-Click Downloads** - Simple, intuitive interface
@@ -40,14 +40,14 @@ Access settings to customize:
 
 4. Click **"Load unpacked"** and select the folder where you downloaded this project.
 
-That's it! You should now see TikTok Video Downloader in your list of extensions.
+That's it! You should now see TikGrab in your list of extensions.
 
 ---
 
 ## 🎯 How to Use
 
 1. **Navigate to TikTok**: Go to any TikTok video page (e.g., `tiktok.com/@username/video/...`)
-2. **Click the extension icon**: Click on the TikTok Video Downloader icon in your Chrome toolbar
+2. **Click extension icon**: Click on TikGrab icon in your Chrome toolbar
 3. **Click Download**: Click the "Download Video" button in the popup
 4. **Wait for completion**: The extension will automatically detect and download the video
 5. **Find your video**: The video will be saved to your default downloads folder
@@ -56,12 +56,11 @@ That's it! You should now see TikTok Video Downloader in your list of extensions
 
 ## 🧠 Key Features
 
-- **Multiple Detection Strategies**: Uses blob URLs, attributes, context, and ML-style scoring
-- **Fallback Methods**: If one download method fails, automatically tries alternatives
-- **Smart Adaptation**: Stores successful patterns for future detection
-- **Progress Tracking**: Real-time progress updates during download
-- **Cross-Platform Filenames**: Sanitized filenames work on all operating systems
-- **Clean UI**: Modern, TikTok-inspired interface
+- **Smart Detection** - Automatically finds TikTok videos on any page
+- **Instant Downloads** - One-click downloading with smart technology
+- **Progress Tracking** - Real-time download progress updates
+- **Cross-Platform** - Works on all operating systems with clean filenames
+- **Privacy First** - All processing happens locally in your browser
 
 ---
 
@@ -74,30 +73,10 @@ That's it! You should now see TikTok Video Downloader in your list of extensions
 
 ---
 
-## 🔧 Technical Details
-
-- **Detection Methods**: 7 strategies including blob URL detection, attribute matching, context selectors, ML-style scoring, and size/position heuristics
-- **Download Methods**: 3 fallback strategies (blob fetch, MediaRecorder, source detection)
-- **Adaptive Learning**: Stores successful detection patterns in Chrome storage
-- **Real-time Monitoring**: Uses MutationObserver to detect new videos as you scroll
-- **Filename Sanitization**: Cross-platform compatible filenames
-- **Privacy**: All processing happens locally in your browser
-
----
-
-## ⚠️ Known Limitations
-
-- **Blob URL Access**: Some videos may require fallback recording methods
-- **Video Quality**: Downloads the quality available in the player's current state
-- **Structure Changes**: TikTok may change their layout (extension adapts automatically)
-- **Performance**: Recording entire videos may take time for longer content
-
----
-
-## 🛠️ File Structure
+## ️ File Structure
 
 ```
-TikTokVideoDownloader/
+TikGrab/
 ├── manifest.json          # Extension configuration
 ├── content.js             # Video detection and download logic
 ├── background.js          # Download coordination and storage
@@ -111,7 +90,7 @@ TikTokVideoDownloader/
 
 ---
 
-✨ No complicated setup. No manual URL copying. TikTok Video Downloader is built to just work.
+✨ No complicated setup. No manual URL copying. TikGrab is built to just work.
 
 Made with ❤️ for seamless video downloading.
 

@@ -1,5 +1,5 @@
 /**
- * TikTok Video Downloader - Content Script
+ * TikGrab - Content Script
  * Handles video detection, download methods, and adaptive structure handling
  */
 
@@ -7,7 +7,7 @@
 class Logger {
   constructor() {
     this.enabled = true;
-    this.prefix = '[TT-Downloader]';
+    this.prefix = '[TG-CONTENT]';
     this.maxLogs = 500; // Keep only last 500 logs
     this.contextValid = true;
   }
@@ -91,7 +91,7 @@ class Logger {
 
 const logger = new Logger();
 
-class TikTokVideoDetector {
+class TikGrabVideoDetector {
   constructor() {
     this.detectionStrategies = [
       this.detectByBlobUrl.bind(this),
@@ -113,7 +113,7 @@ class TikTokVideoDetector {
     // Load saved patterns from storage
     this.loadPatterns();
     
-    logger.log('TikTokVideoDetector initialized');
+    logger.log('TikGrab VideoDetector initialized');
     logger.debug('Detection strategies count:', this.detectionStrategies.length);
     logger.debug('Fallback strategies count:', this.fallbackStrategies.length);
   }
@@ -912,7 +912,7 @@ class TikTokVideoDetector {
 /**
  * Download Manager - Handles multiple download methods
  */
-class TikTokDownloadManager {
+class TikGrabDownloadManager {
   constructor() {
     this.downloadMethods = [
       this.downloadViaBlobUrl.bind(this),
@@ -920,7 +920,7 @@ class TikTokDownloadManager {
       this.downloadViaFetchProxy.bind(this)
     ];
     
-    logger.log('TikTokDownloadManager initialized');
+    logger.log('TikGrab DownloadManager initialized');
     logger.debug('Download methods count:', this.downloadMethods.length);
   }
   
@@ -1677,14 +1677,14 @@ class TikTokDownloadManager {
 /**
  * Main Content Script Controller
  */
-class TikTokContentController {
+class TikGrabContentController {
   constructor() {
-    this.detector = new TikTokVideoDetector();
-    this.downloader = new TikTokDownloadManager();
+    this.detector = new TikGrabVideoDetector();
+    this.downloader = new TikGrabDownloadManager();
     this.currentVideo = null;
     this.isDownloading = false;
     
-    logger.log('TikTokContentController initialized');
+    logger.log('TikGrab ContentController initialized');
     this.initialize();
   }
   
@@ -1968,8 +1968,8 @@ class TikTokContentController {
 // Initialize the content controller
 try {
   logger.log('Content script loading...');
-  const controller = new TikTokContentController();
-  logger.log('TikTok Video Downloader: Content script loaded successfully');
+  const controller = new TikGrabContentController();
+  logger.log('TikGrab: Content script loaded successfully');
 } catch (error) {
-  console.error('[TT-Downloader] CRITICAL: Failed to load content script:', error);
+  console.error('[TG-CONTENT] CRITICAL: Failed to load content script:', error);
 }

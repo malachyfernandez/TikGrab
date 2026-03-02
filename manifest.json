@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TikTok Video Downloader",
+  "name": "TikGrab",
   "version": "1.0.0",
-  "description": "Download TikTok videos directly from your browser with multiple fallback methods.",
+  "description": "Download TikTok videos instantly with one click.",
   "permissions": ["storage", "downloads", "activeTab", "scripting"],
   "host_permissions": ["https://www.tiktok.com/*", "https://*.tiktok.com/*"],
   "icons": {

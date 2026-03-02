@@ -1,12 +1,12 @@
 /**
- * TikTok Video Downloader - Popup Controller
+ * TikGrab - Popup Controller
  */
 
 // Comprehensive logging system
 class Logger {
   constructor() {
     this.enabled = true;
-    this.prefix = '[TT-Downloader-POPUP]';
+    this.prefix = '[TG-POPUP]';
     this.maxLogs = 500; // Keep only last 500 logs
   }
   
@@ -75,7 +75,7 @@ class Logger {
 
 const logger = new Logger();
 
-class TikTokPopupController {
+class TikGrabPopupController {
   constructor() {
     this.isTikTokPage = false;
     this.videoFound = false;
@@ -102,7 +102,7 @@ class TikTokPopupController {
       settingsLink: document.getElementById('settingsLink')
     };
     
-    logger.log('TikTokPopupController initialized');
+    logger.log('TikGrab popup controller initialized');
     this.init();
   }
   
@@ -528,9 +528,9 @@ try {
   logger.log('Popup script loading...');
   document.addEventListener('DOMContentLoaded', () => {
     logger.log('DOM content loaded, initializing controller');
-    new TikTokPopupController();
-    logger.log('TikTok Video Downloader: Popup script loaded successfully');
+    new TikGrabPopupController();
+    logger.log('TikGrab: Popup script loaded successfully');
   });
 } catch (error) {
-  console.error('[TT-Downloader-POPUP] CRITICAL: Failed to load popup script:', error);
+  console.error('[TG-POPUP] CRITICAL: Failed to load popup script:', error);
 }
